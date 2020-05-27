@@ -1,0 +1,239 @@
+*{box-sizing: border-box}
+body{
+    font-family: "Montserrat Light", serif;;
+}
+/*********************************************/
+#titre-espPerso{
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    font-family: "Montserrat Light", serif;
+    color: white;
+    text-transform: uppercase;
+    margin: auto;
+    background-color: orangered;
+}
+.line{
+    height: 20px;
+    background-color: white;
+    width: 50%;
+    margin: auto;
+}
+.containerAll{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.row1{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.container{
+    width: 69%;
+}
+.row2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container2{
+    width: 30%;
+}
+
+#allproduct_title{
+    font-size: 28px;
+    font-family: "Montserrat Light", serif;
+    padding: 15px;
+    background-color: #1f506e;
+    display: flex;
+    justify-content: left;
+    margin: 5% 0 0;
+    border-radius: 7px;
+    color: white;
+    border-right: 4px solid #efefef;
+}
+#addproduct_title{
+    font-size: 28px;
+    font-family: "Montserrat Light", serif;
+    padding: 22px;
+    background-color: #1f506e;
+    display: flex;
+    justify-content: left;
+    margin: 11% 0 0;
+    border-radius: 7px;
+    color: white
+}
+
+
+/*-----------------------Tables------*/
+
+th, td {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tb-addedProducts{
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: white;
+    padding: 25px 10px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 1px 2px 6px rgba(168, 168, 168, 0.51);
+}
+.row1 h1{
+    position: absolute;
+    width: 30%;
+    text-align: right;
+    float: left;
+    left: 14%;
+    margin: auto;
+    top: 54%;
+}
+thead th{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+tbody{
+    text-align: center;
+}
+
+
+/*-----------------------Form------*//*********************************************/
+
+
+.formAddProduct{
+    height: auto;
+    background-color: white;
+    padding: 25px;
+    margin: auto 0 50px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px rgba(168, 168, 168, 0.51);
+}
+.row2 h1{
+    position: absolute;
+    width: 30%;
+    text-align: right;
+    float: right;
+    right: 14%;
+    margin: auto;
+    top: 54%;
+}
+.formAddProduct form{
+    margin-top: 5px;
+}
+.formAddProduct form label{
+    margin-bottom: 20px;
+}
+.label-image{
+    cursor: pointer;
+    color: #003640;
+}
+.label-image:hover{
+    color: #25a5c4;
+}
+.input-image{
+    display: none;
+}
+.formAddProduct form input,textarea{
+    width: 100%;
+    border-radius: 4px;
+    float: right;
+    padding: 15px;
+    border: 1px solid lightgrey;
+    font-family: "Montserrat Light", serif;
+    margin: 5px 0 20px;
+}
+.formAddProduct form textarea{
+    width: 100%;
+    height: auto;
+
+}
+.formAddProduct input[type=file]{
+
+}
+/* upload image */
+#form2{
+    margin-top: 240px;
+}
+#preview{
+    height: auto;
+}
+#err{
+    margin-top: 100px;
+}
+
+/******************* button **************/
+.btnAdd{
+    font-size: 25px;
+    cursor: pointer;
+}
+.fa-trash-alt{
+    color: #333333;
+}
+.btnadd:hover{
+    background-color: #4995e3;
+    color: white;
+}
+.upload-btn-wrapper {
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    color: #333333;
+}
+.upload-btn-wrapper input[type=file] {
+    font-size: 20px;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    position: relative;
+    padding: 20px;
+    border: none;
+    color: #333333;
+    background-color: #efefef;
+}
+/************************* MEDIA **********************/
+
+@media only screen and (max-width: 1439px){
+
+    .containerAll{
+        flex-direction: column;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .container2{
+        width: 100%;
+    }
+    .formAddProduct{
+        width: 100%;
+    }
+    .formAddProduct form textarea{
+        max-width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 1005px){
+
+    .row1{
+         flex-direction:column;
+     }
+    *{
+        display: flex;
+        flex-direction: column;
+    }
+    #titre-espPerso{
+        font-size: 30px;
+    }
+}

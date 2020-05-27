@@ -1,0 +1,64 @@
+body, html{
+    font-family: "Open Sans", serif;
+}
+.container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 50%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 35px;
+}
+#titre_contact{
+    font-size: 60px;
+    font-family: Anton, serif;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+}
+.nav_contact{
+    background-color: #333;
+    width: 100%;
+    font-size: 25px;
+    color: papayawhip;
+    font-family: "Open Sans", serif;
+    margin-bottom:80px;
+    /*text-transform: uppercase;*/
+    padding: 10px 0 10px 50px;
+    letter-spacing: 2px;
+
+}
+label{
+    margin-top: 20px;
+}
+h3{
+    font-size: 35px;
+    width: 100%;
+    margin-top: 200px;
+    text-align: center;
+    color: mediumseagreen;
+    font-weight: bold;
+}
+pre{
+    font-size: 15px;
+    background-color: #efefef;
+    border-radius: 20px;
+    padding: 20px;
+}
+p{
+    font-size: 18px;
+}
+.alert{
+    margin-top: 180px;
+}
+
+/*************************************** MEDIA ***************************/
+
+@media only screen and (max-width: 764px){
+
+    #titre_contact{
+        font-size: 40px;
+    }
+
+}
+

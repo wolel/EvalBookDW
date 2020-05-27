@@ -1,0 +1,348 @@
+body{
+    /*background-color: white;*/
+    z-index: -9999;
+}
+/*=============================CL_IMAGES */
+
+/* Position the image container (needed to position the left and right arrows) */
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+.cursor {
+    cursor: pointer;
+}
+/* =========================images hidden */
+.container1{
+    display: none;
+}
+
+
+/* =========================percussions africaines djembe============ */
+
+/*----------background image with 2 djembe--------------*/
+#backgrDjembe{
+    display: block;
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    left: 0;
+    margin: auto;
+    z-index: -2;
+    transform: scaleX(-1);
+}
+#backgrTitreDjeme{
+
+    position: absolute;
+    width: 40%;
+    left: -100px;
+    top: 590px;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+    font-size: 55px;
+    text-align: left;
+    text-shadow: 2px 2px #333;
+}
+/*-------------------------------*/
+
+.container2,.container3, .container21,.container31{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.c2 img{
+    width: 90%;
+    cursor: pointer;
+    margin-left: 35px;
+}
+
+.mySlides img{
+    /*width: 100%;*/
+    /*position: absolute;*/
+    left: -412px;
+    right: 0;
+    top: -160px;
+    margin: auto;
+}
+/* =========================article buttons */
+#btnPerc{
+    left: 27px;
+    position: absolute;
+    top: 75%;
+    right: 0;
+    width: 300px;
+    height: 108px;
+    color: red;
+    z-index: 999;
+    background-color: rgba(255, 239, 213, 0.51);
+    cursor: pointer;
+    border: none;
+
+}
+#btnPercAfr{
+    left: 27px;
+    position: absolute;
+    top: 95%;
+    right: 0;
+    width: 300px;
+    height: 108px;
+    color: red;
+    z-index: 999;
+    background-color: rgba(255, 239, 213, 0.51);
+    cursor: pointer;
+    border: none;
+}
+#btnGuit{
+    left: 27px;
+    position: absolute;
+    top: 115%;
+    right: 0;
+    width: 300px;
+    height: 108px;
+    color: red;
+    z-index: 999;
+    background-color: rgba(255, 239, 213, 0.51);
+    cursor: pointer;
+    border: none;
+}
+#btnPercAfr:active, #btnGuit:focus, #btnPerc:active{
+    text-decoration: none;
+}
+span{
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+
+
+
+/* =========================MODAL=========================*/
+
+
+#djem1, #djem2, #djem3, #djem4, #djem5, #djem6,#guit1, #guit2, #guit3,
+#guit4, #guit5, #guit6{
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+#djem1:hover,#djem2:hover, #djem3:hover, #djem4:hover, #djem5:hover, #djem6:hover,
+#guit1:hover, #guit2:hover, #guit3:hover, #guit4:hover, #guit5:hover, #guit6:hover{
+    opacity: 0.7;
+}
+
+/*-------Modal background----*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top:100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;/* Enable scroll if needed */
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+#modalTitle, #modalTitle2, #modalTitle3, #modalTitle4,#modalTitle5, #modalTitle6,
+#modalGTitle,#modalGTitle2, #modalGTitle3,#modalGTitle4, #modalGTitle5,#modalGTitle6{
+    color: red;
+    z-index: 999;
+    font-size: 40px;
+    width: 560px;
+    position: absolute;
+    top: 100px;
+    left: 140px;
+    font-family: "Open Sans Light", serif;
+    transition: .3s;
+    background-color: #111111;
+}
+#modalText, #modalText2, #modalText3, #modalText4,#modalText5, #modalText6,
+#modalGText, #modalGText2, #modalGText3, #modalGText4,#modalGText5, #modalGText6{
+    color: white;
+    font-size: 18px;
+    width: 560px;
+    position: absolute;
+    top: 80px;
+    left: 200px;
+    line-height: 35px;
+    font-family: "Open Sans Light", serif;
+    background-color: #111111;
+    padding: 120px 80px;
+    transition: .3s;
+}
+#modalTitle, #modalTitle2, #modalTitle3, #modalTitle4, #modalTitle5, #modalTitle6,
+#modalGTitle, #modalGTitle2, #modalGTitle3, #modalGTitle4, #modalGTitle5, #modalGTitle6{
+    animation-name: zoomTitle;
+    animation-duration: .6s;
+}
+#modalText, #modalText2, #modalText3, #modalText4, #modalText5, #modalText6,
+#modalGText, #modalGText2, #modalGText3, #modalGText4,#modalGText5, #modalGText6{
+    animation-name: zoomText;
+    animation-duration: .6s;
+}
+@keyframes zoomTitle {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+@keyframes zoomText{
+    from{transform: scale(0)}
+    to{transform: scale(1)}
+}
+.modal-content{
+    left: 30px;
+    margin-left: 760px;
+    display: block;
+    width: 100%;
+    max-width: 700px;
+}
+/* Caption of Modal Image */
+#caption{
+    margin: 10px 32%;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px
+}
+/*---Add animation----*/
+.modal-content, #caption{
+    animation-name: zoom;/*------?---*/
+    animation-duration: .6s;
+}
+@keyframes zoom {
+    from{transform: scale(0);}
+    to{transform:scale(1)}
+}
+#close,#close2{
+    left: 13%;
+    z-index: 999;
+    position: absolute;
+    top: 30px;
+    width: 20px;
+    /* right: 35px; */
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: .3s;
+}
+#close:hover, #close:focus,
+#close2:hover, #close2:focus{
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content{
+        width: 100%;
+    }
+}
+
+/* =========================Next & previous buttons */
+
+#btnPrevNext{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    color: rgb(75, 98, 122);
+    font-weight: bold;
+    font-size: 40px;
+    user-select: none;
+    padding: 16px;
+    top: 106%;
+    left: 350px;
+    right: 0;
+    margin: auto;
+    width: 60%;
+    height: 50px;
+    z-index: 999 !important;
+
+}
+.next {
+    border-radius: 3px 0 0 3px;
+    float: right;
+}
+.prev {
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #333333;
+    font-size: 18px;
+    padding: 8px 12px;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Six columns side by side */
+.column {
+    position: relative;
+    top: 80px;
+    right: 100px;
+
+    width: 20.66%;
+}
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+
+/*---------------------------------------CONNECTED text-------------------------*/
+
+.conectedText{
+    float: left;
+    width: 50%;
+    background-color: papayawhip;
+    padding: 10px 10px 10px 60px;
+    margin-top: 10px;
+}
+.welcomeText{
+    float: left;
+    width: 25%;
+    background-color: papayawhip;
+    padding: 10px;
+    margin-top: 10px;
+}
+.logout{
+    float: right;
+    width: 25%;
+    background-color: papayawhip;
+    padding: 10px;
+    margin-top: -26px;
+}

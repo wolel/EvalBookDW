@@ -1,0 +1,620 @@
+*{box-sizing: border-box}
+body{
+    padding: 0;
+    margin:0;
+    /*background-color: #E2E5E0;*/
+    font-size: 14px;
+    font-family: "Open Sans", serif;
+    /*background: repeating-linear-gradient(45deg, rgba(96, 109, 188, 0.5), rgba(96, 109, 188, 0.51) 10px, rgba(70, 82, 152, 0.51) 10px, rgba(70, 82, 152, 0.51) 20px);*/
+}
+/*===========================HEADER=============*/
+.logStatDate{
+    width: 30%;
+}
+#login-status{
+    margin-left: 20px;
+    color: #2D77A2;
+    font-size: 12px;
+}
+#time{
+    float: right;
+    margin-right: 95px;
+    margin-top: -33px;
+    color: #2D77A2;
+    font-size: 12px;
+}
+#dbconnectmsg{
+    position: absolute;
+    top: 42%;
+    left: 8px;
+    z-index: 12;
+    color: white;
+}
+.head{
+    width: 100%;
+    display: block;
+}
+.head img{
+     width: 100%;
+     top: 0;
+ }
+.head h1{
+    color: white;
+    float: right;
+    margin: 50px 40px 0 0;
+    font-size: 45px;
+    display: inline-block;
+    font-family: "Open Sans Light",serif;
+}
+header nav{
+    background-color: #333333;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+/* Style the links inside the navigation bar */
+header .linknav{
+    margin: 0 auto ;
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+    cursor: pointer;
+    padding: 0 20px 0 20px;
+}
+
+header a{
+    padding: 10px;
+    color: #f2f2f2;
+    text-decoration: none;
+    list-style: none;
+}
+header a:hover{
+    background-color: orange;
+    color: white;
+    padding: 5px;
+}
+
+header #logoutForm{
+    margin: auto 10px;
+}
+header #btnlogout{
+    padding: 6px 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    text-transform: uppercase;
+}
+header #btnlogout:hover{
+    background-color: #767676;
+}
+/*----------------dropdown menu--------*/
+header .dropbtn {
+    display: none;
+    /*background-color: #2D77A2;*/
+    background-color: #333333;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+header .dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+header .dropdown-content {
+    display: none;
+    width: 100%;
+    /*background-color: #f9f9f9;*/
+    background-color: #333333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: -14px;
+}
+
+header .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+header .dropdown-content a:hover {background-color: rgba(255, 165, 0, 0.66)
+}
+
+header .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header .dropdown:hover .dropbtn {
+    /*background-color: #3e8e41;
+    background-color: #2D77A2;*/
+}
+
+
+/*************************************** MEDIA ***************************/
+
+@media only screen and (max-width: 764px){ /*and (orientation: portrait){*/
+
+    *{box-sizing: border-box}
+    body{max-width: 100%; max-height: 100%}
+
+    .head{
+        width: 100%;
+    }
+    .logStatDate{
+        display: none;
+        /*width: 100%;
+        background-color: #2D77A2;*/
+    }
+    #time, #login-status{
+        display: none;
+        /*margin-right: 20px;
+        color: white;*/
+    }
+    header .linknav{
+        margin: 0 ;
+    }
+    header ul{
+        flex-direction: column;
+    }
+    header li{
+        /*padding: 5px;*/
+    }
+    header li:hover{
+        color: white;
+    }
+
+    header a{
+        padding: 0;
+    }
+    header nav{
+        flex-direction: column;
+    }
+    #dbconnectmsg{
+        top: 92px;
+        left: 4px;
+        font-size: 10px;
+    }
+    header #logoutForm{
+        margin: auto 0;
+    }
+   header #btnlogout{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        margin: auto;
+    }
+    header #btnlogout:hover{
+        background-color: red;
+        width: 100%;
+    }
+    header .dropbtn {
+        display: block;
+    }
+
+    /*---------------------------------Login form */
+    #loginForm{
+        display: flex;
+        flex-direction: column;
+        top: 20px;
+        width: 70%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding-top: 20px;
+    }
+    #loginForm input{
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 7px;
+        border: none;
+    }
+    #loginForm button[type=submit]{
+        width: 50%;
+        background-color: #1f506e;
+        color: white;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    /*----------------------signup */
+    #signup{
+        width: 100%;
+        color: white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+    #signup a{
+        width: 50%;
+        background-color: #1f506e;
+        padding: 10px 73px;
+        border-radius: 4px;
+    }
+    /*--------------------------- */
+    .nav.responsive a{
+        float: none;
+        height: 100px;
+        text-align: left;
+    }
+    .head img{
+        width: 100%;
+    }
+    .head h1{
+        font-size: 25px;
+    }
+
+}
+
+
+/**************************************************************************/
+
+@media only screen and (min-width: 765px){
+
+    header .dropdown-content{
+        display: block;
+        width: 100%;
+    }
+    .logStatDate{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(45, 119, 162, 0.65);
+        border-bottom-left-radius: 5px;
+        padding-bottom: 5px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #login-status, #time{
+        color: white;
+        margin:5px auto 3px auto;
+    }
+    header .linknav{
+        width: 100%;
+        margin: auto;
+    }
+    header.linknav a{
+        padding: 17px 8px;
+    }
+    header #logoutForm{
+        margin: auto;
+        width: 20%;
+    }
+    header #btnlogout{
+        padding: 18px 13px;
+    }
+    header #btnlogout:hover{
+        background-color: red;
+    }
+
+}
+
+/*
+
+    @media only screen and (max-width: 812px) and (orientation: landscape){
+
+        nav{
+            background-color: #2D77A2;
+            height: 50px;
+            flex-direction: row;
+            position: relative;
+            top: 0;
+        }
+        ul{
+            flex-direction: row;
+            left: 0;
+            right: 0;
+            margin: 30px auto;
+            font-size: 12px;
+
+        }
+        #btnlogout{
+            right: 0;
+            top: 0;
+            margin: auto;
+            font-size: 10px
+        }
+        .header-logout{
+            height: 30px;
+            position: absolute;
+            right: 0;
+        }
+        #logoutForm{
+            height: 30px;
+        }
+        .login-status{
+            color: white;
+            top: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            float: right;
+            font-size: 12px;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 4px;
+        }
+        .time{
+            color: white;
+            top: 0;
+            right: 0;
+            margin: auto;
+            float: right;
+            font-size: 12px;
+            padding: 4px;
+        }
+    }
+
+
+
+
+
+
+@media only screen and (min-width: 768px){
+
+
+    nav{
+
+        background-color: #333333;
+        height: 40px;
+        flex-direction: column;
+        position: relative;
+        top: 0;
+
+        box-shadow: 2px 2px 2px rgba(106, 103, 106, 0.47);
+    }
+    ul{
+        top: 10px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-size: 15px;
+        position: relative
+    }
+    .login-status{
+        position: absolute;
+        top: -75px;
+        right: 0;
+        left: 80%;
+        float: right;
+        font-size: 15px;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: orangered;
+        padding: 10px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    .time{
+        position: absolute;
+        top: -75px;
+        left: 0;
+        font-size: 15px;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: orangered;
+        padding: 10px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    #btnlogout{
+        background-color: #1f506e;
+        color: white;
+        right: 0;
+        top: 0;
+        position: absolute;
+        margin: auto;
+    }
+
+
+    /*---------------------------------Login form */
+/*
+    #loginForm{
+        display: flex;
+        flex-direction: column;
+        top: 20px;
+        width: 70%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding-top: 20px;
+    }
+    #loginForm input{
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 7px;
+        border: none;
+    }
+    #loginForm button[type=submit]{
+        width: 50%;
+        background-color: #1f506e;
+        color: white;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+
+*/
+/******************************************** CONTENT
+.container{
+    z-index: -2;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.txt{
+    padding: 0 20px;
+}
+.txt p{
+    font-size: 15px;
+    text-align: justify;
+}
+.txt h1{
+    text-transform: uppercase;
+}
+
+.title-home{
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+}
+.title-home h1{
+    font-size: 65px;
+    color: #333333;
+}
+.title-home p {
+    font-size: 20px;
+    top: -30px;
+    margin: auto;
+    position: relative;
+}
+
+.img1 img{
+    width: 500px;
+    position: relative;
+    top: -60px;
+}
+.txt_row1 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    top: 40px;
+    position: relative;
+}
+
+.link{
+    padding: 10px;
+    background-color: orangered;
+    color: white;
+    position: relative;
+    top: 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+*/
+/*-----------------row 2----
+    .row2{
+        background-color: #18594D;
+        display: flex;
+        flex-direction: row;
+        padding: 60px 0;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+    .title2-home{
+        right: 0;
+        left: 0;
+        margin: auto;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+    .title2-home h1{
+        font-size: 65px;
+        color: #333333;
+        text-transform: uppercase;
+    }
+    .txt_row2{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        color: white;
+        margin-left: 30px;
+    }
+    .txt_row2 h1{
+        padding: 0;
+    }
+    .img2 img{
+        width: 700px;
+    }
+
+*/
+/*-----------------row 3----
+    .row3{
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        padding: 30px 0;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    .txt_row3{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        color: #333333;
+        margin-right: 30px;
+    }
+
+    #link3{
+        padding: 10px;
+        background-color: orangered;
+        color: white;
+        width: 220px;
+        border-radius: 40px;
+        text-align: center;
+    }
+*/
+/*-----------------row 4----
+    .row4{
+        background-color:#004763;
+        display: flex;
+        flex-direction: row;
+        padding: 30px 0;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    .txt_row4{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        color: white;
+        margin-right: 30px;
+    }
+    .img4 img{
+        width: 700px;
+    }
+    #link4{
+        padding: 10px;
+        background-color: orangered;
+        color: white;
+        width: 220px;
+        border-radius: 40px;
+        text-align: center;
+    }
+
+}
+*/

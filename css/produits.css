@@ -1,0 +1,427 @@
+.containerProducts{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.containerProducts .row{
+    margin: 10px;
+    padding: 15px 15px 30px 15px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.containerProducts h1{
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    font-family: "Montserrat Light", serif;
+    color: white;
+    text-transform: uppercase;
+    margin: auto;
+    background-color: orangered;
+}
+.line{
+    height: 20px;
+    background-color: white;
+    width: 50%;
+    margin: auto;
+}
+.containerProducts p{
+    text-align: justify ;
+}
+.article{
+    margin: 20px auto;
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 15px;
+    border-radius: 8px;
+    /* box-shadow: 1px 2px 4px rgba(181, 181, 181, 0.65); */
+    /* background-image: url(../img/pattern/wood-backg-white.jpg); */
+    /* background-size: 100%;*/
+}
+    .article .txtCont{
+        background-color: #f6f6f6;
+        padding: 10px;
+        height: 52%;
+    }
+
+    .article h2{
+        font-size: 22px;
+    }
+    .article div h3{
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    }
+
+                /* image product */
+   .article div img{
+       width: 100%;
+       cursor: pointer;
+       transition: .3s;
+   }
+   #imgContainer{
+       width: 300px;
+       height: 300px;
+       margin: 0 auto;
+       text-align: center;
+   }
+
+
+
+
+                /* MODAL image */
+
+
+
+
+
+#btnShowProduct{
+    padding: 10px;
+    background-color: #00acee;
+    border-radius: 5px;
+    color: white;
+    font-family: "Montserrat Light", serif;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+/*---------
+
+.col-container{
+    display: table;
+    width: 100%;
+}
+.col{
+    display: table-cell;
+    padding: 16px;
+}
+
+---------*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-content{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+                /* text content container*/
+#txt-content{
+    background-color: #efefef;
+    padding: 16px 50px;
+    left: 30px;
+    top: 100px;
+    margin-left: 30px;
+    width: 700px;
+    height: 560px;
+    text-align: justify;
+}
+#txt-content h1{
+    text-align: center;
+    justify-content: left;
+    font-size: 45px;
+}
+#txt-content p{
+    text-align: justify;
+}
+                /* text content container END*/
+#caption{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+/* Add Animation - Zoom in the Modal */
+.modal-content,#txt-content, #caption{
+    animation-name: zoom;
+    animation-duration: .6s;
+}
+@keyframes zoom {
+    from{transform: scale(0)}
+    to{transform: scale(1)}
+}
+.close{
+    //position: absolute;
+    top: 10px;
+    right: 35px;
+    color: #333333;
+    font-size: 50px;
+    font-weight: bold;
+    transition: .3s;
+    cursor: pointer;
+}
+.close:hover,.close:focus{
+    color: #bbbbbb;
+}
+.close:before{
+    content: '';
+    opacity: 0;
+    transition: .4s;
+    font-size: 20px;
+}
+.close:hover:before{
+    opacity: 1;
+}
+
+
+
+                                    /* Media */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/* ----------
+.containerDrum{
+    margin: auto;
+    top: 438px;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.containerDrum form{
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.containerDrum h1{
+    font-family: "Silver Forte Grunge", serif;
+    text-transform: capitalize;
+    margin-top: 40px;
+    font-size: 55px;
+    width: 100%;
+    text-align: center;
+
+}
+*/
+
+
+/*-------------text drum-------------------
+.get-txtDrum{
+    position: absolute;
+    bottom: 80px;
+    text-align: center;
+    width: 100%;
+}
+.get-txtDrum p {
+    margin-top: -15px;
+}*/
+/*-------------images drum-------------------
+.get-imgDrum{
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    cursor: pointer;
+}
+*/
+
+/* btn click product
+.seeProd{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    height: 60%;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.seeProd:hover{
+    background-color: rgba(255, 255, 255, 0.42);
+}
+.seeProd::before{
+    content: 'Voir le produit';
+    transition: .4s;
+    opacity: 0;
+}
+.seeProd:hover:before{
+    opacity: 1;
+}
+span.close{
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    margin: auto;
+    font-size: 27px;
+    font-weight: bolder;
+    padding: 20px;
+    color: #333333;
+    border-radius: 5px;
+}
+span.close:hover{
+    background-color: rgba(51, 51, 51, 0.49);
+    color: white;
+}
+*/
+
+/* image from database
+.getimg{
+    bottom: 43px;
+}
+/* get image from database
+.seeProdimg{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    width: 35%;
+    height: 400px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+}
+
+/*--------------container-----------------------
+.container.style {
+    display: none;
+}
+.container,.containerGuit {
+    display: none;
+    position: absolute;
+    top: 145%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 85%;
+    height: 700px;
+    text-align: center;
+    background-color: #e5e5e5;
+    border-radius: 5px;
+}
+
+
+
+************* media queries **************
+
+@media only screen and (max-width: 700px) {
+
+    .row{
+        flex-direction: column;
+    }
+    .containerDrum form .row{
+        display: block;
+    }
+    .containerDrum form{
+        width: 100%;
+    }
+    .art1{
+        margin-bottom: 40px;
+    }
+    .containerDrum h1{
+        width: 100%;
+        text-align: center;
+    }
+    .get-imgDrum{
+        width: 100%;
+        height: 300px;
+    }
+    .art1{
+        height: 500px;
+    }
+
+}*/
+/********************
+
+@media only screen and (min-width: 701px){
+    .article{
+        height: 500px;
+    }
+    .containerDrum form{
+       width: 100%;
+        margin: -10px;
+        flex-wrap: wrap;
+    }
+    .art1{
+
+        margin: 10px;
+    }
+    .containerDrum h1{
+        width: 100%;
+        text-align: center;
+    }
+    .get-imgDrum{
+        width: 100%;
+        height: 60%;
+    }
+    .get-txtDrum{
+        text-align: center;
+        height: auto;
+        bottom: 0;
+        top: 60%
+    }
+
+    .getimg{
+        width: 100%;
+    }
+    .containerDrum form .row1,.row2 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+*/
+/*************************************** MEDIA ***************************/
+
+@media only screen and (max-width: 764px){
+
+    .containerProducts h1{
+        font-size: 40px;
+    }
+
+}

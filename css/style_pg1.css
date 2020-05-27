@@ -1,0 +1,49 @@
+*{box-sizing: border-box}
+body{
+    padding: 0;
+    margin: 0;
+    background: repeating-linear-gradient(45deg,#606dbc,#606dbc 10px,#465298 10px,#465298 20px);
+}
+
+form{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin:auto;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.87);
+    display: block;
+    padding: 60px 20px 60px 20px;
+    text-align: center;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border: 6px solid #4c5798;
+}
+form input{
+    position: relative;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+input[type=password],[type=text]{
+    font-size: 18px;
+    display: inline-block;
+    padding: 20px;
+    width: 400px;
+    margin-left: 10px;
+}
+input[type=submit]{
+    cursor: pointer;
+    padding: 30px 80px 30px 80px ;
+    background-color: #606dbc;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+input[type=submit]:hover{
+    box-shadow: inset 2px 2px 5px #383873;
+}
+/*===============index2.php====================*/
+

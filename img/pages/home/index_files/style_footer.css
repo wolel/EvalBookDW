@@ -1,0 +1,96 @@
+body, html{
+    margin:0;
+    padding: 0;
+    max-height: 100%;
+}
+/*===================================FOOTER */
+#content{
+    min-height: auto;
+}
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa-instagram, .fa-facebook-square,.fa-envelope{
+    color: rgb(75, 98, 122);
+    font-size: 25px;
+    display: inline-block;
+    margin: 8px 40px 8px 40px;
+    cursor: pointer;
+
+}
+.fa-instagram:hover, .fa-facebook-square:hover,.fa-envelope:hover{
+    color: white;
+}
+/*------------link-------*/
+
+footer ul{
+    display: flex;
+    list-style-type: none;
+    cursor: pointer;
+    padding: 0 20px 0 20px;
+}
+
+footer a{
+    padding: 10px;
+    color: #f2f2f2;
+    text-decoration: none;
+}
+footer a:hover{
+    color: grey;
+}
+
+
+/*=========================MEDIA================================*/
+
+@media only screen and (max-width: 803px) {
+
+    footer{
+        flex-direction: column;
+    }
+    .fa-instagram, .fa-facebook-square,.fa-envelope{
+        margin: 10px 0 0 10px;
+        font-size: 28px;
+    }
+    div.a{
+
+        justify-content: center;
+    }
+    footer .linknav{
+        width: 100%;
+    }
+    footer a{
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    footer a:hover{
+        color: orangered;
+    }
+    footer #logoutForm{
+        display: none;
+    }
+
+
+}
+/*=========================================================*/
+@media only screen and (min-width: 804px){
+
+
+    footer a{
+        font-size: 15px;
+    }
+    .fa-instagram, .fa-facebook-square,.fa-envelope{
+        margin: 10px 0 0 10px;
+        font-size: 28px;
+    }
+    footer #logoutForm{
+        display: none;
+    }
+}

@@ -1,0 +1,43 @@
+body{
+    font-family: "Montserrat Light", serif;
+}
+.signuperror{
+    margin:0 auto;
+    background-color: rgba(255, 0, 0, 0.33);
+    width: 50%;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+.mt-2 input,.mt-2 h1, .mt-2 label, .mt-2 select,.mt-2 option, .mt-2 button{
+    font-family: "Montserrat Light", serif;
+   }
+.mt-2 label{
+    margin: 40px auto 0;
+    left: 0;
+    right: 0;
+}
+.mt-2 input{
+    margin: 10px auto;
+}
+
+
+.mt-2 a{
+    float: left;
+    padding: 6px 12px;
+    margin: auto 8px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    font-family: "Montserrat Light", serif;
+    color: #333333;
+    text-decoration: none;
+    text-align: center;
+}
+.mt-2 a:hover{
+    text-decoration: none;
+    font-weight: bold;
+}
